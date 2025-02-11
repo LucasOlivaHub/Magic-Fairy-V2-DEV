@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Erika Cerdá",
+        "texto": "Siempre súper atenta y todo lo hace hermosísimo y muy prolijo, está en cada detalle. Ya la 2da vez que le compro uñitas a ludmi, y no pienso dejar de hacerlo ♡ una genia, la mejor ✨️",
+        "foto": "./imagenes/opiniones/erika-cerda.png",
+        "estrellas": 5,
+        "link": "https://maps.app.goo.gl/rjGYVZ5FT5b9G95y9"
+    },
+    {
+        "id": 3,
+        "nombre": "Julia Escorza",
+        "texto": "Excelentes trabajos ♥ Compré un set de press-on y encargué unas personalizadas también. Amé la prolijidad, el esmero en cada detalle y la excelentísima atención en todo momento ♥",
+        "foto": "./imagenes/opiniones/julia-escorza.png",
+        "estrellas": 5,
+        "link": "https://maps.app.goo.gl/gtLkuiPtJSHuQWRM9"
+    },
+    {
+        "id": 4,
+        "nombre": "Florencia Diz",
+        "texto": "Si buscan calidad, buena onda, profesionalismo, creatividad y prolijidad es por acá. Ludmi una genia, muy amorosa y con un talento impresionante. Las uñas me llegaron divinas, super precisas las medidas y sobre todo la prolijidad del trabajo y la presentación. Vuelvo a comprar y lo super recomiendo mil veces.",
+        "foto": false,
+        "estrellas": 5,
+        "link": "https://maps.app.goo.gl/rfudQLiLzs6SZ2zu7"
+    },
+    {
+        "id": 1000,
+        "nombre": "Quispe Guamán Samari",
+        "texto": "Una lástima que no sirve para las vacas 🐄. Pero muy lindo igualmente, una paisa Ludmi 🤠🐎. Saludos desde mi granero, ¡Órale Marta, vamos a comer 🐮!",
+        "foto": "./imagenes/opiniones/quispe.png",
+        "estrellas": 3,
+        "link": "/"
+    },
+    {
+        "id": 5,
+        "nombre": "Ariana Palavecino",
+        "texto": "Me dejo sin palabras lo hermosoo que quedo el diseño sin dudas volvería a encargarle🫶Lit estoy obsesionada 🤭 para ser la primera vez que uso press on nails son re cómodas ni se sienten. Los detalles ame y son super buena calidad, la atención de Ludmi super atenta y muy amable, te explica todo 🤗 además del re laburo que tiene 🫶🫶 Super recomendado 💖",
+        "foto": "./imagenes/opiniones/ariana-palavecino.png",
+        "estrellas": 5,
+        "link": "https://maps.app.goo.gl/zYvcpr3p87HPPkmm8"
+    }
+]

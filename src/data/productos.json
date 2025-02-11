@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "imgPortada": "/imagenes/productos/unia-michi.jpg",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/unia-michi.jpg"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Uña Michi",
+        "descripcion": "¿Alguna vez pensaste en tener la patita de tu michi en tus uñas? 🥹🐈‍⬛ Y lo mejor... poder usarlas una y otra vez por siempre ♻️💅🏼",
+        "precio": 100,
+        "descuento": null,
+        "categorias": ["nuevo", "michi"],
+        "destacado": true,
+        "tipoProducto": "uña"
+    },
+    {
+        "id": 2,
+        "imgPortada": "/imagenes/productos/unia-2.jpg",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/unia-michi.jpg"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Uña no sé qué aa de africaaaaa",
+        "descripcion": "Descripción indefinida",
+        "precio": 100,
+        "descuento": null,
+        "categorias": ["nuevo", "africa"],
+        "destacado": false,
+        "tipoProducto": "uña"
+    },
+    {
+        "id": 3,
+        "imgPortada": "/imagenes/productos/unia-3.jpg",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/unia-michi.jpg"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Mandorlas Modernas",
+        "descripcion": "Realizadas con full polygel combinando técnicas 3D",
+        "precio": 20000,
+        "descuento": 10,
+        "categorias": ["polygel", "descuento"],
+        "destacado": false,
+        "tipoProducto": "uña"
+    },
+    {
+        "id": 4,
+        "imgPortada": "/imagenes/productos/unia-michi.jpg",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/unia-michi.jpg"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Uña Michi 2",
+        "descripcion": "¿Alguna vez pensaste en tener la patita de tu michi en tus uñas? 🥹🐈‍⬛ Y lo mejor... poder usarlas una y otra vez por siempre ♻️💅🏼",
+        "precio": 100,
+        "descuento": null,
+        "categorias": null,
+        "destacado": true,
+        "tipoProducto": "uña"
+    },
+    {
+        "id": 5,
+        "imgPortada": "/imagenes/productos/unia-michi.jpg",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/unia-michi.jpg"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Uña Michi 3",
+        "descripcion": "¿Alguna vez pensaste en tener la patita de tu michi en tus uñas? 🥹🐈‍⬛ Y lo mejor... poder usarlas una y otra vez por siempre ♻️💅🏼",
+        "precio": 100,
+        "descuento": 50,
+        "categorias": ["descuento", "michi"],
+        "destacado": true,
+        "tipoProducto": "uña"
+    },
+    {
+        "id": 6,
+        "imgPortada": "./imagenes/productos/unia-michi.jpg",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/unia-michi.jpg"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Uña Michi 4",
+        "descripcion": "¿Alguna vez pensaste en tener la patita de tu michi en tus uñas? 🥹🐈‍⬛ Y lo mejor... poder usarlas una y otra vez por siempre ♻️💅🏼",
+        "precio": 100,
+        "descuento": null,
+        "categorias": null,
+        "destacado": true,
+        "tipoProducto": "uña"
+    },
+    {
+        "id": 6,
+        "imgPortada": "/imagenes/productos/accesorios/stickers-1.webp",
+        "setImg": null,
+        "colores": [{
+            "color": "el-color",
+            "codigoColor": "#000",
+            "imagenes": ["/imagenes/productos/accesorios/stickers-1.webp"]
+        }
+        ],
+        "talles": ["S", "M", "L", "XL"],
+        "titulo": "Stickers adhesivos",
+        "descripcion": "Stickers para tus uñitas",
+        "precio": 100,
+        "descuento": null,
+        "categorias": null,
+        "destacado": true,
+        "tipoProducto": "accesorios"
+    }
+]
