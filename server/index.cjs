@@ -2,18 +2,16 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Middleware para servir archivos estáticos
-app.use(express.static(path.join(__dirname, "../build"))); // Carpeta donde Vite genera los archivos
+// Servir archivos estáticos desde la carpeta "build"
+app.use(express.static(path.join(__dirname, "build")));
 
-// Manejo de rutas de React
+// Capturar todas las rutas y devolver index.html
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-// Iniciar el servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en ${PORT}`);
 });
-
