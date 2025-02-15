@@ -391,9 +391,65 @@ header {
 #navbarContainer a:hover, #navbarContainer a:hover i,
 #navbarContainer .nav-link:hover, #navbarContainer .nav-link:hover i,
 .nav-link-activo, .nav-link-activo i {
-  color: var(--color-violeta);
+  color: #fff; /*var(--color-violeta); */
 }
 
+.esmalte-hover {
+  position: relative;
+}
+
+.esmalte-hover::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  width: 0%;
+  height: 100%;
+  transition: width 400ms;
+  background-color: var(--color-violeta);
+  opacity: 0.7;
+  z-index: -1;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* esmalte */
+.esmalte-hover::after {
+  content: "";
+  background-image: url(./assets/esmalte-unias.png);
+  background-size: cover;
+  display: flex;
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 30px;
+}
+
+
+.esmalte-hover:hover::after {
+  width: 30px;
+  animation: leftToRight 400ms both;
+}
+
+.esmalte-hover:hover::before{
+  content: "";
+  width: 110%;
+  padding: 0 25px;
+}
+
+
+@keyframes leftToRight {
+  from{
+    right: 100%;
+  }
+  to {
+    right: -25px;
+  }
+}
+
+
+/* Medias query */
+
+/* mobile y tablet */
 @media screen and (max-width: 992px) {
   #navbarContainer {
     width: 0px;
@@ -541,7 +597,7 @@ header {
   }
 }
 
-/* PC */
+/* PC desplegable*/
 @media screen and (min-width: 992px) {
 
   .desplegable-container .desplegable.active {
@@ -553,6 +609,7 @@ header {
     background-color: #f7e8fff5;
   }
 }
+/* fin desplegables */
 
 
 
@@ -1274,6 +1331,8 @@ header {
 
 .prod-descuento-tag {
   width: fit-content;
+  height: fit-content;
+  align-self: flex-end;
 }
 
 /* paginacion */
@@ -1373,6 +1432,7 @@ header {
   }
 }
 
+/* PC L productos tienda */
 @media screen and (min-width: 1200px) {
   .producto-tienda {
     max-height: 450px;

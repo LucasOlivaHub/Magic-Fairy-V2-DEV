@@ -1,5 +1,6 @@
 import React from 'react'
 import { fotoPerfil } from '../assets';
+import MagicBtn from './MagicBtn';
 
 
 const HomeSobreMi = () => {
@@ -13,6 +14,7 @@ const HomeSobreMi = () => {
                 <div className="d-flex flex-column gap-2 py-4" data-aos="fade-right" data-aos-delay="100">
                     <p className="text-start">Mi nombre es Ludmila Vario, soy Magic Fairy Nails Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore laudantium deleniti numquam aut cupiditate, id nulla eos commodi, aperiam voluptatum esse itaque laborum molestias, enim sapiente quaerat quisquam quos nobis.</p>
                     <p className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aliquam laudantium quam pariatur animi.</p>
+                    <MagicBtn link={"/sobre-mi"} texto={"Saber más sobre mi"} color={"rosa"}/>
                 </div>
 
                 <div className="d-flex justify-content-center" data-aos="fade-left" data-aos-delay="200">
