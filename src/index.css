@@ -47,6 +47,7 @@ a {
   width: fit-content !important;
 }
 
+
 /* Colores */
 .bg-white {
   background-color: #fff;
@@ -111,6 +112,10 @@ a {
 
 .texto-desactivado {
   color: rgba(172, 172, 172, 0.555);
+}
+
+.texto-rojo {
+  color: rgb(223, 77, 77);
 }
 
 .fw-500 {
@@ -331,6 +336,13 @@ a {
 
 /* -- FIN GENERALES -- */
 
+/*-- GENERALES DE PAGINAS --*/
+.h3-titulo-pagina {
+  width: fit-content;
+}
+
+/*-- FIN GENERALES DE PAGINAS --*/
+
 /*--------ANIMACIONES------- */
 
 /* animacion shake */
@@ -366,6 +378,17 @@ a {
   80% { transform: rotate(15deg); }
   100% { transform: rotate(0deg); }
 }
+
+
+@keyframes leftToRight {
+  from{
+    right: 100%;
+  }
+  to {
+    right: -25px;
+  }
+}
+
 /* --------FIN ANIMACIONES ------------- */
 
 /*--- Header ---*/
@@ -388,61 +411,21 @@ header {
   font-weight: 500;
 }
 
-#navbarContainer a:hover, #navbarContainer a:hover i,
-#navbarContainer .nav-link:hover, #navbarContainer .nav-link:hover i,
-.nav-link-activo, .nav-link-activo i {
-  color: #fff; /*var(--color-violeta); */
-}
-
-.esmalte-hover {
-  position: relative;
-}
-
-.esmalte-hover::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  width: 0%;
-  height: 100%;
-  transition: width 400ms;
-  background-color: var(--color-violeta);
-  opacity: 0.7;
-  z-index: -1;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-/* esmalte */
-.esmalte-hover::after {
-  content: "";
-  background-image: url(./assets/esmalte-unias.png);
-  background-size: cover;
-  display: flex;
-  position: absolute;
-  top: -10px;
-  width: 0;
-  height: 30px;
-}
 
 
-.esmalte-hover:hover::after {
-  width: 30px;
-  animation: leftToRight 400ms both;
-}
-
-.esmalte-hover:hover::before{
-  content: "";
-  width: 110%;
-  padding: 0 25px;
-}
-
-
-@keyframes leftToRight {
-  from{
-    right: 100%;
+@media screen and (max-width: 992px) {
+  #navbarContainer a:hover, #navbarContainer a:hover i,
+  #navbarContainer .nav-link:hover, #navbarContainer .nav-link:hover i,
+  .nav-link-activo, .nav-link-activo i {
+    color: #fff; /*var(--color-violeta); */
   }
-  to {
-    right: -25px;
+}
+
+@media screen and (min-width: 992px) {
+  #navbarContainer a:hover, #navbarContainer a:hover i,
+  #navbarContainer .nav-link:hover, #navbarContainer .nav-link:hover i,
+  .nav-link-activo, .nav-link-activo i {
+    color: #fff; 
   }
 }
 
@@ -550,6 +533,8 @@ header {
 
 .desplegable-container .desplegable a {
   font-weight: 400 !important;
+  width: fit-content;
+  padding: 0 12px;
 }
 
 .desplegable.active  {
@@ -601,17 +586,130 @@ header {
 @media screen and (min-width: 992px) {
 
   .desplegable-container .desplegable.active {
-    position: absolute;
-    min-width: 150px;
-    max-width: 220px;
-    left: -18px;
-    padding: 12px 18px;
-    background-color: #f7e8fff5;
+    position: fixed;
+    width: 400px;
+    right: -18px;
   }
+
+  .desplegable.active .bg-white {
+    height: 21px;
+    z-index: -1;
+  }
+
+  .desplegable-container .desplegable .desplegable-items {
+    padding: 12px 18px;
+    background-color: #f7e8fff5 !important;
+    z-index: -1;
+  }
+
+
 }
 /* fin desplegables */
 
 
+
+/* Efecto esmalte */
+.esmalte-hover {
+  position: relative;
+}
+
+.esmalte-hover::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  width: 0%;
+  height: 100%;
+  transition: width 400ms;
+  background-color: var(--color-violeta) !important;
+  opacity: 0.7;
+  z-index: -1;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+
+.esmalte-hover::after {
+  content: "";
+  background-image: url(./assets/esmalte-unias.png);
+  background-size: cover;
+  display: flex;
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 30px;
+}
+
+.esmalte-hover:hover::after {
+  width: 30px;
+  animation: leftToRight 400ms both;
+}
+
+.esmalte-hover:hover::before{
+  content: "";
+  animation: growToRight 400ms both;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  @keyframes growToRight {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 125%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  @keyframes growToRight {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 110%;
+    }
+  }
+}
+
+/* esmalte activo */
+.esmalte-activo {
+  position: relative;
+}
+
+.esmalte-activo > .nav-link{
+  color: #fff;
+}
+
+.esmalte-activo::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  width: 110%;
+  padding: 0 25px;
+  height: 25px;
+  transition: width 400ms;
+  background-color: var(--color-violeta);
+  opacity: 0.7;
+  z-index: -1;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.esmalte-activo::after {
+  content: "";
+  background-image: url(./assets/esmalte-unias.png);
+  background-size: cover;
+  display: flex;
+  position: absolute;
+  top: -10px;
+  height: 30px;
+  width: 30px;
+  animation: leftToRight 400ms both;
+}
+/* fin esmalte */
 
 /*--- Fin header --- */
 
@@ -1826,6 +1924,30 @@ header {
 }
 
 /* ---- FIN PAGOS ----- */
+
+
+/*--- SOBRE MI PAGINA ---*/
+.sobremi-img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+/* --- FIN SOBRE MI PAGINA --- */
+
+/* --- COMO COMPRAR PAGINA --- */
+.comocomprar-section img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.comocomprar-section ul {
+  list-style-type: none;
+}
+
+
+/* --- FIN COMO COMPRAR PAGINA --- */
+
 
 /*--- 404 ---*/
 .page-404-section {

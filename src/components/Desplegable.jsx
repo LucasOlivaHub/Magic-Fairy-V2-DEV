@@ -27,30 +27,19 @@ export const Desplegable = ({nombre, items, cerrarNavbar, index, activo, setActi
             desplegableContent.current.classList.remove("d-none");
 
         } else if (!desplegableActivo) {
-            desplegableContent.current.classList.add("desplegable-off");
-
-            setTimeout(() => {
-                desplegableContent.current.classList.remove("desplegable-off");
-                desplegableContent.current.classList.remove("active");
-                desplegableContent.current.classList.add("d-none");
-            }, 400)
+              desplegableContent.current.classList.remove("active");
+              desplegableContent.current.classList.add("d-none");
         }
     }, [desplegableActivo]);
     
 
     // FUNCIONES para evitar que se choquen los desplegables y se tilde la animacion
     const handleMouseEnter = () => {
-        if (activo === null || activo === index) {
-            setDesplegableActivo(true);
-            setActivo(index);
-        }
+      setDesplegableActivo(true);
     };
 
     const handleMouseLeave = () => {
-        if (activo === index) {
-            setDesplegableActivo(false);
-            setActivo(null);
-        }
+      setDesplegableActivo(false);
     };
 
     const handleClick = () => {
@@ -58,10 +47,8 @@ export const Desplegable = ({nombre, items, cerrarNavbar, index, activo, setActi
     };
   
     return (
-      <div className='desplegable-container esmalte-hover' 
-    //   onMouseEnter={() => handleMouseEnter()}
-    //   onMouseLeave={() => handleMouseLeave()}
-      
+      <div className={`desplegable-container ${desplegableActivo && 'esmalte-activo'} ${desplegableActivo && !isMobile && 'esmalte-hover'}`} 
+
       onMouseEnter={!isMobile ? handleMouseEnter : null}
       onMouseLeave={!isMobile ? handleMouseLeave : null}
       onClick={isMobile ? handleClick : null}
@@ -80,10 +67,14 @@ export const Desplegable = ({nombre, items, cerrarNavbar, index, activo, setActi
           <i className={`bi bi-chevron-down ${desplegableActivo && 'flecha-activa-arriba'}`}></i>
         </button>
 
-        <ul className="desplegable d-none flex-column gap-3" ref={desplegableContent}>
+        <ul className="desplegable d-none flex-column gap-0" ref={desplegableContent}>
+          <div className='d-none d-lg-block bg-white'></div>
+          <div className='desplegable-items d-flex flex-column gap-3'>
+
                 {items && items.map((i, index) => {
                     return <li key={index}><Link to={i.path} className='nav-link esmalte-hover' onClick={() => cerrarNavbar()}>{i.name}</Link></li>
                 })}
+          </div>
         </ul>
       </div>
     );

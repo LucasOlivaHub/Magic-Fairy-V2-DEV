@@ -15,6 +15,7 @@ import ProductoPage from './components/tienda/ProductoPage/ProductoPage';
 import Carrito from './screens/Carrito';
 import { Checkout } from './screens/Checkout';
 import { SobreMi } from './screens/SobreMi';
+import { ComoComprar } from './screens/ComoComprar';
 
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
             <Route path='/checkout' element={<Checkout/>}/>
 
             <Route path='/sobre-mi' element={<SobreMi/>}/>
-
+            <Route path='/como-comprar' element={<ComoComprar/>}/>
+            
             <Route path='*' element={<Page404/>}/>
           </Routes>
         <WhatsappFlotante/>

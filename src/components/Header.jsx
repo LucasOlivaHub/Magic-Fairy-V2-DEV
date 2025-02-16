@@ -15,7 +15,7 @@ const Header = () => {
     const isTiendaOrCarrito = location.pathname === '/tienda' || location.pathname === '/carrito' || location.pathname.startsWith('/producto/') || location.pathname.startsWith('/tienda/');
     
     
-    const [desplegableAbierto, setDesplegableAbierto] = useState(null); // Aquí guardamos el índice del desplegable activo
+    // const [desplegableAbierto, setDesplegableAbierto] = useState(null); // Aquí guardamos el índice del desplegable activo
 
 
     useEffect(() => {
@@ -52,9 +52,9 @@ const Header = () => {
       setNavbarMostrar(false);
   }
 
-  const handleSetActivo = (index) => {
-      setDesplegableAbierto(index); // Establecemos el desplegable activo
-  };
+  // const handleSetActivo = (index) => {
+  //     setDesplegableAbierto(index); // Establecemos el desplegable activo
+  // };
 
 
   return (
@@ -85,9 +85,9 @@ const Header = () => {
                     ]}
                     cerrarNavbar={cerrarNavbar}
                     // para controlar el fin de la animacion de cada desplegable
-                    index={0}
-                    setActivo={handleSetActivo}
-                    activo={desplegableAbierto}
+                    // index={0}
+                    // setActivo={handleSetActivo}
+                    // activo={desplegableAbierto}
                   />
 
                   {/* fin desplegable tienda */}
@@ -106,14 +106,16 @@ const Header = () => {
                   <Desplegable 
                     nombre="Información"
                     items={[
-                      { name: 'Sobre mi', path: './#sobremi' },
+                      { name: 'Sobre mi', path: '/sobre-mi' },
+                      { name: '¿Cómo Comprar?', path: '/como-comprar' },
                       { name: 'Términos y condiciones', path: 'https://coal-sand-a89.notion.site/T-RMINOS-Y-CONDICIONES-d2568342335b4549a55e1e2726068f45' },
+                      { name: 'Preguntas frecuentes', path: 'https://coal-sand-a89.notion.site/PREGUNTAS-FRECUENTES-a42840971c6c4149880cf706a12f7f82' },
                     ]}
                     cerrarNavbar={cerrarNavbar}
                     // para controlar el fin de la animacion de cada desplegable
-                    index={1}
-                    setActivo={handleSetActivo}
-                    activo={desplegableAbierto}
+                    // index={1}
+                    // setActivo={handleSetActivo}
+                    // activo={desplegableAbierto}
                   />
                   {/* Fin desplegable info */}
                 
