@@ -414,8 +414,6 @@ header {
 
 
 @media screen and (max-width: 992px) {
-  #navbarContainer a:hover, #navbarContainer a:hover i,
-  #navbarContainer .nav-link:hover, #navbarContainer .nav-link:hover i,
   .nav-link-activo, .nav-link-activo i {
     color: #fff; /*var(--color-violeta); */
   }

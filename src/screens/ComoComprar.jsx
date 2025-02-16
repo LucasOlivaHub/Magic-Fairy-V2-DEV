@@ -6,7 +6,7 @@ import medidaInstrucciones from '../assets/images/como-comprar/sets-a-medida-ins
 
 export const ComoComprar = () => {
   return (
-    <section className='comocomprar-section'>
+    <section className='comocomprar-section py-4'>
         <div className="container">
             <div className="pb-5">
                 <h3 className="sobremi-titulo titulo-lineaabajo h3-titulo-pagina">¿Cómo comprar?</h3>

@@ -3,7 +3,7 @@ import { fotoPerfil } from '../assets';
 
 export const SobreMi = () => {
   return (
-    <section className='py-4'>
+    <section className='sobremi-section py-4'>
       <div className="container">
         <div className="pb-4">
             <h3 className="sobremi-titulo titulo-lineaabajo h3-titulo-pagina">Sobre mi</h3>
