@@ -13,10 +13,7 @@ const Header = () => {
 
     const location = useLocation();
     const isTiendaOrCarrito = location.pathname === '/tienda' || location.pathname === '/carrito' || location.pathname.startsWith('/producto/') || location.pathname.startsWith('/tienda/');
-    
-    
-    // const [desplegableAbierto, setDesplegableAbierto] = useState(null); // Aquí guardamos el índice del desplegable activo
-
+  
 
     useEffect(() => {
         // Función para manejar clics fuera del navbar
@@ -52,10 +49,6 @@ const Header = () => {
       setNavbarMostrar(false);
   }
 
-  // const handleSetActivo = (index) => {
-  //     setDesplegableAbierto(index); // Establecemos el desplegable activo
-  // };
-
 
   return (
     <header className='bg-white d-flex align-items-center'>
@@ -79,15 +72,18 @@ const Header = () => {
                     nombre="Productos"
                     items={[
                       { name: 'Ver todos', path: '/tienda' },
-                      { name: 'Press on', path: '/' },
+
+                      { name: 'Press on', path: '/', 
+                        dobleDesplegable: [
+                          { path: '/tienda/x12', name: 'x12'},
+                          { path: '/tienda/x6', name: "x6"}
+                        ], 
+                      },
+
                       { name: 'Accesorios', path: '/tienda/accesorios' },
                       { name: 'Otros', path: '/' }
                     ]}
                     cerrarNavbar={cerrarNavbar}
-                    // para controlar el fin de la animacion de cada desplegable
-                    // index={0}
-                    // setActivo={handleSetActivo}
-                    // activo={desplegableAbierto}
                   />
 
                   {/* fin desplegable tienda */}
@@ -112,10 +108,7 @@ const Header = () => {
                       { name: 'Preguntas frecuentes', path: 'https://coal-sand-a89.notion.site/PREGUNTAS-FRECUENTES-a42840971c6c4149880cf706a12f7f82' },
                     ]}
                     cerrarNavbar={cerrarNavbar}
-                    // para controlar el fin de la animacion de cada desplegable
-                    // index={1}
-                    // setActivo={handleSetActivo}
-                    // activo={desplegableAbierto}
+
                   />
                   {/* Fin desplegable info */}
                 

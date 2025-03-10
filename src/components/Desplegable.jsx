@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { SegundoDesplegable } from './SegundoDesplegable';
 
-export const Desplegable = ({nombre, items, cerrarNavbar, index, activo, setActivo}) => {
+export const Desplegable = ({nombre, items, cerrarNavbar}) => {
     const [desplegableActivo, setDesplegableActivo] = useState(false);
     const desplegableContent = useRef();
 
@@ -43,15 +44,14 @@ export const Desplegable = ({nombre, items, cerrarNavbar, index, activo, setActi
     };
 
     const handleClick = () => {
-        setDesplegableActivo(!desplegableActivo);
+      setDesplegableActivo(!desplegableActivo);
     };
   
     return (
       <div className={`desplegable-container ${desplegableActivo && 'esmalte-activo'} ${desplegableActivo && !isMobile && 'esmalte-hover'}`} 
-
+    
       onMouseEnter={!isMobile ? handleMouseEnter : null}
       onMouseLeave={!isMobile ? handleMouseLeave : null}
-      onClick={isMobile ? handleClick : null}
       >
         <Link to={items[0].path}
           className={`d-none d-lg-flex desplegable-btn nav-link align-items-center gap-1 fw-500 ${desplegableActivo && 'nav-link-activo'}`}
@@ -62,17 +62,36 @@ export const Desplegable = ({nombre, items, cerrarNavbar, index, activo, setActi
 
         <button
           className={`d-lg-none desplegable-btn nav-link d-flex align-items-center gap-1 fw-500 ${desplegableActivo && 'nav-link-activo'}`}
+          onClick={isMobile ? handleClick : null}
         >
           {nombre}
           <i className={`bi bi-chevron-down ${desplegableActivo && 'flecha-activa-arriba'}`}></i>
         </button>
 
         <ul className="desplegable d-none flex-column gap-0" ref={desplegableContent}>
-          <div className='d-none d-lg-block bg-white'></div>
+          <div className='d-none d-lg-block bg-white barrita-blanca-desplegable'></div>
+          
           <div className='desplegable-items d-flex flex-column gap-3'>
 
                 {items && items.map((i, index) => {
+
+                  if(i.dobleDesplegable) {
+                    // SI ES DOBLE DESPLEGABLE:
+                    return (
+                      // -----DOBLE DESPLEGABLE ITEM-----
+                    <div key={index} className='dobleDesplegable-link desplegable-container'>
+                        <SegundoDesplegable 
+                          isMobile={isMobile}
+                          cerrarNavbar={cerrarNavbar}
+                          item={i}
+                          /> 
+                    </div>)
+                    // -----FIN DOBLE DESPLEGABLE ITEM----
+                    
+                  } else {
+                    // SI NO ES DOBLE DESPLEGABLE, ITEM NORMAL
                     return <li key={index}><Link to={i.path} className='nav-link esmalte-hover' onClick={() => cerrarNavbar()}>{i.name}</Link></li>
+                  }
                 })}
           </div>
         </ul>
