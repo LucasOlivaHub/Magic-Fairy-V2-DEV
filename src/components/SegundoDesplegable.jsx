@@ -31,6 +31,7 @@ export const SegundoDesplegable = ({isMobile, cerrarNavbar, item}) => {
     };
 
     const handleClick = () => {
+      console.log("hola")
       setDesplegableDosActivo(!desplegableDosActivo);
     };
 

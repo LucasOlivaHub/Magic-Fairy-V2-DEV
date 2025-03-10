@@ -574,7 +574,6 @@ header {
 
 /* segundo desplegable */
 .dobleDesplegable-link {
-  z-index: -1;
   display: flex;
 }
 
